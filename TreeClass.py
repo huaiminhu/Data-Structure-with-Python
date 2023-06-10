@@ -25,28 +25,6 @@ class Tree: # 樹類別
         for i in inDegree:
             if i == 0: # 無入分支就是樹根
                 return inDegree.index(i)
-            
-    def treeBFS(self):
-        priority = Queue()
-        priority.enQueue(self.findRoot())
-        while not priority.isEmpty():
-            v = priority.deQueue()
-            print(chr(v + 65))
-            for vx in self.L[v]:
-                priority.enQueue(vx)
-                    
-    def treeDFS(self, vs):
-        print(chr(vs + 65))
-        for vx in self.L[vs]:
-            self.treeDFS(vx)
-            
-    def treeHeight(self, vs):
-        if len(self.L[vs]) == 0:
-            return 1
-        height = 0
-        for vx in self.L[vs]:
-            height = max(height, self.treeHeight(vx))
-        return height + 1
 
 class BTNode: # 二元樹節點類別
     
@@ -93,13 +71,3 @@ class BinaryTree: # 二元樹類別
         self.postorder(n.right)
         self.cnodes += 1
         print(n.data)
-        
-    def BTHeight(self, n):
-        height = 0
-        if n.left:
-            lheight = self.BTHeight(n.left)
-            height = max(height, lheight)
-        if n.right:
-            rheight = self.BTHeight(n.right)
-            height = max(height, rheight)
-        return height + 1         

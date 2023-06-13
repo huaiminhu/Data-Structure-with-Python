@@ -1,5 +1,3 @@
-from QueueClass import Queue
-
 class Tree: # 樹類別
     
     def read(self): # 讀取輸入資料

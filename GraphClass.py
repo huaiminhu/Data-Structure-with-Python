@@ -1,4 +1,3 @@
-from stackClass import Stack
 from QueueClass import Queue
 
 class GraphMatrix: # 圖的鄰接矩陣類別
